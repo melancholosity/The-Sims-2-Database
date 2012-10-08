@@ -1,0 +1,43 @@
+body {
+	font-family: courier new;
+}
+
+a.index {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+}
+
+table {
+	padding: 20px;
+}
+
+	td.left {
+		text-align: right;
+	}
+	
+		span.traits {
+			color: cyan;
+		}
+
+ul {
+	padding: 20px;
+	list-style-type: none;
+}
+
+	li:hover {
+		cursor: pointer;
+		text-decoration: underline;
+	}
+
+	ul.subneighbourhoods {
+		display: none;
+	}
+	
+	ul.households {
+		display: none;
+	}
+	
+	ul.sims {
+		display: none;
+	}

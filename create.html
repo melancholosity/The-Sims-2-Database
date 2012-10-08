@@ -1,0 +1,61 @@
+<html>
+	
+	<head>
+		
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="create.css"
+		/>
+		
+		<script
+			type="application/javascript"
+			src="create.js">
+		</script>
+		
+		<title>
+			Create-A-Sim
+		</title>
+	
+	</head>
+	
+	<body>
+		
+		<form
+			action="create.php"
+			method="post"
+		>
+			
+			<fieldset class="choosetype">
+				
+				<label for="type">
+					Select type:
+				</label>
+				<select
+					name="type"
+					onchange="getFormAjax(this.value+'.html')"
+				>
+					<option>
+					</option>
+					<option>
+						Sim
+					</option>
+					<option>
+						Cat
+					</option>
+					<option>
+						Dog
+					</option>
+				</select>
+			
+			</fieldset>
+			
+			<fieldset id="formplace">
+			
+			</fieldset>
+		
+		</form>
+	
+	</body>
+
+</html>
