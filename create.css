@@ -36,7 +36,7 @@ div.option1, div.option2, div.option3, div.option4, div.option5, div.option6 {
 	float: left;
 }
 
-button {
+input[type=button] {
 	height: 1.5em;
 	font-family: courier new;
 	}

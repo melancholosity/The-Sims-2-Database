@@ -6,7 +6,7 @@ function getFormAjax (formName) {
 	catch(e) {
 		request=false;
 	}
-	request.open('GET', formName, false);
+	request.open('GET', "ajax/"+formName, false);
 	request.send(null);
 	document.getElementById('formplace').innerHTML=request.responseText;
 }
@@ -40,4 +40,10 @@ function enableAll(nodeArray) {
 	for(var i in nodeArray) {
 		nodeArray[i].disabled = false;
 	}
+}
+
+function clearRadio(whichOnes) {
+	var elements = document.getElementsByName(whichOnes);
+	for(var i in elements)
+		elements[i].checked = false;
 }
