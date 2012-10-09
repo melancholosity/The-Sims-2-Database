@@ -36,7 +36,7 @@ div.option1, div.option2, div.option3, div.option4, div.option5, div.option6 {
 	float: left;
 }
 
-input[type=button] {
+input[type=button], input[type=submit] {
 	height: 1.5em;
 	font-family: courier new;
 	}
@@ -44,3 +44,34 @@ input[type=button] {
 td.left {
 	text-align: right;
 	}
+	
+td.right {
+	padding-left: 50px;
+}
+
+td.button {
+	padding-left: 10px;
+}
+
+td.preferred {
+	font-size: 11px;
+	text-align: center;
+}
+
+table.hobbies, table.grades, table.university {
+	margin-top: -20px;
+}
+
+input.submit {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+}
+
+ul {
+	margin: 0px;
+}
+
+li {
+	list-style-type: none;
+}
