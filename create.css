@@ -2,6 +2,12 @@ body {
 	font-family: courier new;
 }
 
+	a.index {
+		position: fixed;
+		top: 20px;
+		right: 20px;
+	}
+
 table {
 		padding: 20px;
 	}
@@ -29,3 +35,12 @@ div.option1, div.option2, div.option3, div.option4, div.option5, div.option6 {
 	width: 200px;
 	float: left;
 }
+
+button {
+	height: 1.5em;
+	font-family: courier new;
+	}
+
+td.left {
+	text-align: right;
+	}
