@@ -58,7 +58,7 @@ td.preferred {
 	text-align: center;
 }
 
-table.hobbies, table.grades, table.university {
+table.hobbies, table.grades, table.university, table.relations, table.memories {
 	margin-top: -20px;
 }
 
