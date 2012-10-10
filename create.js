@@ -104,3 +104,16 @@ function toggleBadges(badgecheckbox) {
 		}
 	}
 }
+
+function clearNA(what) {
+	document.getElementById(what+"NA").checked = false;
+}
+
+function clearAll(what) {
+	var radios = document.getElementById(what+'fieldset').getElementsByTagName('input');
+	for(var i in radios) {
+		// make sure we don't unset ourself!
+		if(radios[i].value != "N/A")
+			radios[i].checked = false;
+	}
+}
