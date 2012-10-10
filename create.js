@@ -90,3 +90,17 @@ function disableWithHonours() {
 		withHonours[i].checked = false;
 	}
 }
+
+function toggleBadges(badgecheckbox) {
+	var badgeradios = document.getElementsByName(badgecheckbox.name + "badge");
+	if(badgecheckbox.checked) {
+		for(var i in badgeradios) {
+			badgeradios[i].disabled = false;
+		}
+	} else {
+		for(var i in badgeradios) {
+			badgeradios[i].checked = false;
+			badgeradios[i].disabled = true;
+		}
+	}
+}
