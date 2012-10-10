@@ -49,15 +49,44 @@ function clearRadio(whichOnes) {
 }
 
 function toggleJobLevel(jobselector) {
-	var levelradios = document.getElementsByName("level");
+	var levelRadios = document.getElementsByName("level");
 	if(jobselector[jobselector.selectedIndex].value == "" || jobselector[jobselector.selectedIndex].value=="Retired") {
-		for(var i in levelradios) {
-			levelradios[i].disabled = true;
-			levelradios[i].checked = false;
+		for(var i in levelRadios) {
+			levelRadios[i].disabled = true;
+			levelRadios[i].checked = false;
 		}
 	} else {
-		for(var i in levelradios) {
-			levelradios[i].disabled = false;
+		for(var i in levelRadios) {
+			levelRadios[i].disabled = false;
 		}
+	}
+}
+
+function toggleGraduated(majorselector) {
+	var graduatedRadios = document.getElementsByName("graduated");
+	if(majorselector.options[majorselector.selectedIndex].value == "") {
+		for(var i in graduatedRadios) {
+			graduatedRadios[i].checked = false;
+			graduatedRadios[i].disabled = true;
+		}
+	} else {
+		for(var i in graduatedRadios) {
+			graduatedRadios[i].disabled = false;
+		}
+	}
+}
+
+function enableWithHonours() {
+	var withHonours = document.getElementsByName('withhonours');
+	for(var i in withHonours) {
+		withHonours[i].disabled = false;
+	}
+}
+
+function disableWithHonours() {
+	var withHonours = document.getElementsByName('withhonours');
+	for(var i in withHonours) {
+		withHonours[i].disabled = true;
+		withHonours[i].checked = false;
 	}
 }

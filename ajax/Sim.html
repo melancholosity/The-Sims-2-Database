@@ -4862,7 +4862,9 @@
 				</label>
 			</td>
 			<td>
-				<select name="major">
+				<select
+					name="major"
+					onchange="toggleGraduated(this)">
 					<option>
 					</option>
 					<option>
@@ -4914,6 +4916,8 @@
 					name="graduated"
 					type="radio"
 					value="yes"
+					onclick="enableWithHonours()"
+					disabled
 				/>
 				<label for="yes">
 					Yes
@@ -4923,6 +4927,8 @@
 					name="graduated"
 					type="radio"
 					value="no"
+					onclick="disableWithHonours()"
+					disabled
 				/>
 				<label for="no">
 					No
@@ -4939,6 +4945,7 @@
 					name="withhonours"
 					type="radio"
 					value="summacumlaude"
+					disabled
 				/>
 				<label for="summacumlaude">
 					Summa cum Laude
@@ -4948,6 +4955,7 @@
 					name="withhonours"
 					type="radio"
 					value="magnacumlaude"
+					disabled
 				/>
 				<label for="magnacumlaude">
 					Magna cum Laude
@@ -4957,6 +4965,7 @@
 					name="withhonours"
 					type="radio"
 					value="cumlaude"
+					disabled
 				/>
 				<label for="cumlaude">
 					Cum Laude
