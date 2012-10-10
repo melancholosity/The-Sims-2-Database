@@ -47,3 +47,17 @@ function clearRadio(whichOnes) {
 	for(var i in elements)
 		elements[i].checked = false;
 }
+
+function toggleJobLevel(jobselector) {
+	var levelradios = document.getElementsByName("level");
+	if(jobselector[jobselector.selectedIndex].value == "" || jobselector[jobselector.selectedIndex].value=="Retired") {
+		for(var i in levelradios) {
+			levelradios[i].disabled = true;
+			levelradios[i].checked = false;
+		}
+	} else {
+		for(var i in levelradios) {
+			levelradios[i].disabled = false;
+		}
+	}
+}
