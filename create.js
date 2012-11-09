@@ -160,3 +160,26 @@ function addMemories(node) {
 	node.parentNode.insertBefore(document.createElement('br'),node);
 	memoriesCount++;
 }
+
+var homesCount = 1;
+
+function addHome(node)
+{
+	var newHome = document.createElement('li');
+	var newHomeLabel = document.createElement('li');
+	newHomeLabel.className = "option";
+	newHomeLabel.innerHTML = "<label\
+						for=\"previoushomes\"\
+						class=\"proper\">\
+						&nbsp;\
+					</label>";
+	newHome.className = "option";
+	newHome.innerHTML = "<input\
+						type=\"text\"\
+						name=\"previous_home_"+homesCount+"\"\
+					/>";
+	node.parentNode.insertBefore(newHomeLabel,node);
+	node.parentNode.insertBefore(newHome,node);
+	node.parentNode.insertBefore(document.createElement('br'),node);
+	homesCount++;
+}

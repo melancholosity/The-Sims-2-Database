@@ -5844,7 +5844,7 @@
 					<input 
 						type="button"
 						value="Add new"
-						onclick="addMemories(this)"
+						onclick="addMemories(this.parentNode)"
 					/>
 				</li>
 			
@@ -5893,7 +5893,7 @@
 				<li class="option">
 					<input
 						type="text"
-						name="home"
+						name="current_home"
 					/>
 				</li>
 				
@@ -5910,7 +5910,7 @@
 				<li class="option">
 					<input
 						type="text"
-						name="home"
+						name="previous_home_0"
 					/>
 				</li>
 				
@@ -5920,6 +5920,7 @@
 					<input 
 						type="button"
 						value="Add new"
+						onclick="addHome(this.parentNode)"
 					/>
 				</li>
 				
