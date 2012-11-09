@@ -169,7 +169,7 @@ function addHome(node)
 	var newHomeLabel = document.createElement('li');
 	newHomeLabel.className = "option";
 	newHomeLabel.innerHTML = "<label\
-						for=\"previoushomes\"\
+						for=\"previous_home_"+homesCount+"\"\
 						class=\"proper\">\
 						&nbsp;\
 					</label>";
@@ -182,4 +182,27 @@ function addHome(node)
 	node.parentNode.insertBefore(newHome,node);
 	node.parentNode.insertBefore(document.createElement('br'),node);
 	homesCount++;
+}
+
+var ownedLotsCount = 1;
+
+function addOwnedLot(node)
+{
+	var newOwnedLot = document.createElement('li');
+	var newOwnedLotLabel = document.createElement('li');
+	newOwnedLotLabel.className = "option";
+	newOwnedLotLabel.innerHTML = "<label\
+						for=\"owns_"+ownedLotsCount+"\"\
+						class=\"proper\">\
+						&nbsp;\
+					</label>";
+	newOwnedLot.className = "option";
+	newOwnedLot.innerHTML = "<input\
+						type=\"text\"\
+						name=\"owns_"+ownedLotsCount+"\"\
+					/>";
+	node.parentNode.insertBefore(newOwnedLotLabel,node);
+	node.parentNode.insertBefore(newOwnedLot,node);
+	node.parentNode.insertBefore(document.createElement('br'),node);
+	OwnedLotsCount++;
 }
