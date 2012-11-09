@@ -5844,6 +5844,7 @@
 					<input 
 						type="button"
 						value="Add new"
+						onclick="addMemories(this.parentNode)"
 					/>
 				</li>
 			
@@ -5892,7 +5893,7 @@
 				<li class="option">
 					<input
 						type="text"
-						name="home"
+						name="current_home"
 					/>
 				</li>
 				
@@ -5900,7 +5901,7 @@
 					
 				<li class="option">
 					<label
-						for="previoushomes"
+						for="previous_home_0"
 						class="proper">
 						Previous Home(s):
 					</label>
@@ -5909,7 +5910,11 @@
 				<li class="option">
 					<input
 						type="text"
+<<<<<<< HEAD
 						name="previoushomes"
+=======
+						name="previous_home_0"
+>>>>>>> origin/master
 					/>
 				</li>
 				
@@ -5919,6 +5924,7 @@
 					<input 
 						type="button"
 						value="Add new"
+						onclick="addHome(this.parentNode)"
 					/>
 				</li>
 				
@@ -5926,7 +5932,7 @@
 					
 				<li class="option">
 					<label
-						for="owns"
+						for="owns_0"
 						class="proper">
 							Owns:
 					</label>
@@ -5935,7 +5941,7 @@
 				<li class="option">
 					<input
 						type="text"
-						name="owns"
+						name="owns_0"
 					/>
 				</li>
 				
@@ -5945,6 +5951,7 @@
 					<input 
 						type="button"
 						value="Add new"
+						onclick="addOwnedLot(this.parentNode)"
 					/>
 				</li>
 			

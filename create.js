@@ -117,3 +117,92 @@ function clearAll(what) {
 			radios[i].checked = false;
 	}
 }
+
+var memoriesCount = 1;
+
+function addMemories(node) {
+	var selectNode = document.createElement('li');
+	var withNode = document.createElement('li');
+	selectNode.className = "option";
+	selectNode.innerHTML = "<select\
+						name=\"memories"+memoriesCount+"\">\
+						<option>\
+						</option>\
+						<option>\
+							First Kiss\
+						</option>\
+						<option>\
+							Moved Out\
+						</option>\
+						<option>\
+							First WooHoo\
+						</option>\
+						<option>\
+							Graduated\
+						</option>\
+						<option>\
+							Grew Up Well\
+						</option>\
+						<option>\
+							Reached Top of Career\
+						</option>\
+					</select>";
+	withNode.className = "option";
+	withNode.innerHTML = "<label for=\"memorieswith"+memoriesCount+"\">\
+						With:\
+					</label>\
+						<input\
+							type=\"text\"\
+							name=\"memorieswith"+memoriesCount+"\"\
+						/>";
+	node.parentNode.insertBefore(selectNode,node);
+	node.parentNode.insertBefore(withNode,node);
+	node.parentNode.insertBefore(document.createElement('br'),node);
+	memoriesCount++;
+}
+
+var homesCount = 1;
+
+function addHome(node)
+{
+	var newHome = document.createElement('li');
+	var newHomeLabel = document.createElement('li');
+	newHomeLabel.className = "option";
+	newHomeLabel.innerHTML = "<label\
+						for=\"previous_home_"+homesCount+"\"\
+						class=\"proper\">\
+						&nbsp;\
+					</label>";
+	newHome.className = "option";
+	newHome.innerHTML = "<input\
+						type=\"text\"\
+						name=\"previous_home_"+homesCount+"\"\
+					/>";
+	node.parentNode.insertBefore(newHomeLabel,node);
+	node.parentNode.insertBefore(newHome,node);
+	node.parentNode.insertBefore(document.createElement('br'),node);
+	homesCount++;
+}
+
+var ownedLotsCount = 1;
+
+function addOwnedLot(node)
+{
+	var newOwnedLot = document.createElement('li');
+	var newOwnedLotLabel = document.createElement('li');
+	newOwnedLotLabel.className = "option";
+	newOwnedLotLabel.innerHTML = "<label\
+						for=\"owns_"+ownedLotsCount+"\"\
+						class=\"proper\">\
+						&nbsp;\
+					</label>";
+	newOwnedLot.className = "option";
+	newOwnedLot.innerHTML = "<input\
+						type=\"text\"\
+						name=\"owns_"+ownedLotsCount+"\"\
+					/>";
+	node.parentNode.insertBefore(newOwnedLotLabel,node);
+	node.parentNode.insertBefore(newOwnedLot,node);
+	node.parentNode.insertBefore(document.createElement('br'),node);
+	OwnedLotsCount++;
+}
