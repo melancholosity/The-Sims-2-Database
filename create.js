@@ -117,3 +117,46 @@ function clearAll(what) {
 			radios[i].checked = false;
 	}
 }
+
+var memoriesCount = 1;
+
+function addMemories(node) {
+	var selectNode = document.createElement('li');
+	var withNode = document.createElement('li');
+	selectNode.className = "option";
+	selectNode.innerHTML = "<select\
+						name=\"memories"+memoriesCount+"\">\
+						<option>\
+						</option>\
+						<option>\
+							First Kiss\
+						</option>\
+						<option>\
+							Moved Out\
+						</option>\
+						<option>\
+							First WooHoo\
+						</option>\
+						<option>\
+							Graduated\
+						</option>\
+						<option>\
+							Grew Up Well\
+						</option>\
+						<option>\
+							Reached Top of Career\
+						</option>\
+					</select>";
+	withNode.className = "option";
+	withNode.innerHTML = "<label for=\"memorieswith"+memoriesCount+"\">\
+						With:\
+					</label>\
+						<input\
+							type=\"text\"\
+							name=\"memorieswith"+memoriesCount+"\"\
+						/>";
+	node.parentNode.insertBefore(selectNode,node);
+	node.parentNode.insertBefore(withNode,node);
+	node.parentNode.insertBefore(document.createElement('br'),node);
+	memoriesCount++;
+}
